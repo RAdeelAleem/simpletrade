@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleTrade — The Complete All-in-One Trading Terminal</title>
+  <meta name="description" content="Trade manually, manage your portfolio, and automate institutional-grade strategies with SimpleTrade's visual Drop & Deploy engine. No coding required.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#platform" class="nav-brand">
+      <span class="nav-brand-name">SimpleTrade</span>
+      <img class="nav-logo" alt="SimpleTrade icon" src="logo.png">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#company">Company</a></li>
+    </ul>
+    <button class="btn-primary nav-waitlist-btn">Join Waitlist</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMobile" aria-label="Close">✕</button>
+  <a href="#platform">Platform</a>
+  <a href="#security">Security</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#company">Company</a>
+</div>
+
+<main>
+
+<!-- ===== HERO (Landing / Platform) ===== -->
+<section class="hero" id="platform">
+  <div class="reveal">
+    <div class="hero-badge">
+      <span class="material-symbols-outlined">shield</span> Powered by IBKR
+    </div>
+    <h1>The Complete All-in-One Trading Terminal.</h1>
+    <p>Trade manually, manage your portfolio, and automate institutional-grade strategies with our visual Drop &amp; Deploy engine,&nbsp;no coding required.</p>
+    <form class="hero-form" id="heroForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn-hero">Join Waitlist</button>
+      <div class="form-message"></div>
+    </form>
+  </div>
+  <div class="hero-visual reveal-right">
+    <div class="hero-img-wrap">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXsQ_UJzpWEr1yJBYFXE8WgeJi4WCvYM3uiEybyGVu5PujEc24GcAqA7N32NnGjNx0i0VlzaV985Mh0sWr9SHqCbisRVYbws9t3vrYORwSitF7pSpn6WKPHtCbVp_3ybf9SKMJuiWHpq-7I2LebKD2oKguDSzVGF122e-joUmy7pEj_UaqDsBhd4IgOllCoqRpoYNlTQRiRU3k0t6MN3hY8EWZdB2E4DUR-Q5BazNwbXfXOzSs7vIlPETo5866CWkZ1WW4aFhkHWw" alt="SimpleTrade trading dashboard interface">
+    </div>
+    <div class="hero-float">
+      <div class="hero-float-header">
+        <div class="hero-float-icon"><span class="material-symbols-outlined">trending_up</span></div>
+        <div>
+          <div class="hero-float-label">Live Portfolio</div>
+          <div class="hero-float-value">+12.4% <span>Today</span></div>
+        </div>
+      </div>
+      <div class="hero-float-bar"><div class="hero-float-bar-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVOLUTION OF TRADING (Drop & Deploy) ===== -->
+<section class="evolution" id="evolution">
+  <div class="evolution-inner">
+    <div class="section-header reveal">
+      <h2>The Evolution of Trading</h2>
+      <p>Institutional tools shouldn't require a Computer Science degree.</p>
+    </div>
+    <div class="evolution-grid">
+      <!-- Old Way -->
+      <div class="evo-card evo-card--old reveal-left">
+        <div class="evo-card-label">The Old Way</div>
+        <div class="code-block"><code>import pandas as pd<br>import ib_insync as ib<br><br>def on_bar_update(bars, has_new_bar):<br>&nbsp;&nbsp;ema_9 = bars.close.ewm(span=9).mean()<br>&nbsp;&nbsp;if bars.close[-1] &gt; ema_9[-1] and bars.close[-2] &lt;= ema_9[-2]:<br>&nbsp;&nbsp;&nbsp;&nbsp;ib.placeOrder(contract, MarketOrder('BUY', 100))<br>&nbsp;&nbsp;&nbsp;&nbsp;...<br>&nbsp;&nbsp;&nbsp;&nbsp;// 200 lines of error handling later...</code></div>
+        <p class="evo-card-caption">Cluttered, complex coding and brittle infrastructure.</p>
+      </div>
+      <!-- SimpleTrade Way -->
+      <div class="evo-card evo-card--new reveal-right">
+        <div class="evo-card-label">The SimpleTrade Way</div>
+        <div class="dd-visual">
+          <img class="dd-visual-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQsrK3KMGK4GtfX4xvm2kfyaEID3DQP0FMvIr2cyb5xt8qFThxMky_f7mTPZyJ8pRXfkpHROLVOuInJwxeOQaYZbYdwYZw3M1Ql6__tLCRT9OT87xEsgv15xDOLHUXnEUcgyc314jbdiCtNfP_Szx9vviVxHbuC2Am4Kfc95wL_vSE6S8uM7MJN_H7okioCraXbPCB84gtXyLYSQZScuZgVcrrhP9rhD_i5-MCtD-kTZF3Hsip7DvYwUS1st4PdONSyy4q49bkBVA" alt="">
+          <div class="dd-block dd-block--trigger">
+            <div class="dd-block-icon"><span class="material-symbols-outlined">analytics</span></div>
+            <span>9EMA Crosses Up</span>
+          </div>
+          <div class="dd-arrow"><span class="material-symbols-outlined">south</span></div>
+          <div class="dd-block dd-block--action">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span>Execute Market Buy</span>
+          </div>
+        </div>
+        <p class="evo-card-caption">Visual logic. Reliable execution. Zero code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DROP & DEPLOY SHOWCASE ===== -->
+<section class="showcase">
+  <div class="showcase-content reveal-left">
+    <h2>Drop &amp; Deploy</h2>
+    <p>Build complex logical flows in seconds. Our node-based editor turns your ideas into live trading bots effortlessly.</p>
+    <div class="feature-card">
+      <div class="feature-icon"><span class="material-symbols-outlined">add_box</span></div>
+      <div>
+        <h4>Strategy Blocks</h4>
+        <p>Pre-built indicators like RSI, MACD, and Bollinger Bands ready to be connected.</p>
+      </div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><span class="material-symbols-outlined">timer</span></div>
+      <div>
+        <h4>Backtest Instantly</h4>
+        <p>Run your logic against 10 years of historical data with one click.</p>
+      </div>
+    </div>
+  </div>
+  <div class="showcase-visual reveal-right">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDivd28xBmOYvVDMjKbjZPVj0LF7wc4T_usGqjHCLhSf_ixFRptfESm7gpFfbvetOT6w8v_D8I96JZij-VvdtNgy_gUV1oqcO-6VT-QQ9gvZqg-cJklsWPDy1O-QKnups4J1ZSMtSH3OTeD3HVW15soEZsCLr4ODnsq_dIkQRcrpx5Yjb3IkofjmnH8lcbMYB6YGsw_G7rwOp6OpO0TpUPs6KguxKFLK6m7NMFjpLbYwbE6xCJxAaiyoMEx-mGqXopf1GplgwqiKFo" alt="Trading strategy visualization">
+    <div class="showcase-blocks">
+      <div class="sc-block sc-block--trigger">
+        <span class="sc-block-label">Trigger</span>
+        <div class="sc-block-row">
+          <div class="sc-icon-circle sc-icon-circle--green"><span class="material-symbols-outlined">trending_up</span></div>
+          <span>Price &gt; 200 Day MA</span>
+        </div>
+      </div>
+      <div class="sc-block sc-block--action">
+        <span class="sc-block-label">Action</span>
+        <div class="sc-block-row">
+          <div class="sc-icon-circle sc-icon-circle--white"><span class="material-symbols-outlined">shopping_bag</span></div>
+          <span>BUY 100 SHARES</span>
+        </div>
+      </div>
+      <div class="sc-block sc-block--manage">
+        <span class="sc-block-label">Management</span>
+        <div class="sc-block-row">
+          <div class="sc-icon-circle sc-icon-circle--red"><span class="material-symbols-outlined">target</span></div>
+          <span>Take Profit 5%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECURITY ===== -->
+<section class="security" id="security">
+  <div class="security-inner">
+    <div class="security-hero">
+      <div class="security-hero-text reveal-left">
+        <div class="hero-badge">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">verified_user</span> Encrypted &amp; Secure
+        </div>
+        <h2>Your Strategy. Your Funds.<br><span class="accent">Our Protection.</span></h2>
+        <p>SimpleTrade operates as a sophisticated Layer 2 execution interface. We orchestrate your trading logic while your capital remains exactly where it belongs: in your Interactive Brokers account.</p>
+      </div>
+      <div class="security-diagram reveal-right">
+        <div class="diagram-flow">
+          <div class="diagram-top">
+            <div class="diagram-node diagram-node--user">
+              <span class="material-symbols-outlined">person</span>
+              <span>Investor</span>
+            </div>
+            <div class="diagram-line"><div class="diagram-line-label">AES-256</div></div>
+            <div class="diagram-node diagram-node--lock">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">lock</span>
+              <span>SimpleTrade</span>
+              <span style="font-size:7px;opacity:0.8;">SECURE CONTROLLER</span>
+            </div>
+          </div>
+          <div class="diagram-bridge">
+            <span class="material-symbols-outlined">link</span>
+            <div class="diagram-bridge-text">
+              <p>Non-Custodial Bridge</p>
+              <p>Read/Write API Handshake Only</p>
+            </div>
+          </div>
+          <div class="diagram-ibkr">
+            <div class="diagram-ibkr-left">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaGfpvzhgiOzNMGOEOGlAx08zC57nnuDGFkRSojqFpFrIgua9-r000Etw0__rEwW5dG0nTflFAi4NkYSXt-aXykzNwloCxDbfAawmRtWUs2LPQwHCh2nR934W3RzgG6b2kuQ6vl7JPR5i5Kkich_Sxec0m9eECAaDvbKxpZ95er81lnxppSieLPvWhQSNeLQ5_IJKPb5iBCg_c_HHJeoOoD7CJqVgfwYYJ7PiU0cQVDIaebD9MKmKCpJeU7ZRwIsbwc7HdkdUF9vE" alt="IBKR Logo">
+              <div><h4>Interactive Brokers</h4><p>SIPC Protected Account</p></div>
+            </div>
+            <div class="diagram-ibkr-right">
+              <span class="material-symbols-outlined" style="font-size:14px;">check_circle</span>
+              <span>FUNDS REMAIN HERE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Three Pillars -->
+    <div class="section-header reveal" style="margin-top:4rem;">
+      <span style="font-size:0.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:0.3em;color:var(--outline);display:block;margin-bottom:1rem;">Our Infrastructure</span>
+      <h2>The Three Pillars of Safety</h2>
+    </div>
+    <div class="pillars stagger-parent">
+      <div class="pillar-card reveal stagger-child">
+        <div class="pillar-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">account_balance_wallet</span></div>
+        <h3>Non-Custodial</h3>
+        <p>We never hold your capital. Your assets remain securely within your IBKR account at all times. SimpleTrade functions as a remote control, not a vault.</p>
+      </div>
+      <div class="pillar-card reveal stagger-child">
+        <div class="pillar-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">enhanced_encryption</span></div>
+        <h3>AES-256 Encryption</h3>
+        <p>Bank-grade encryption for every strategy and API handshake. We utilize the industry's most rigorous standards to ensure your proprietary logic stays private.</p>
+      </div>
+      <div class="pillar-card reveal stagger-child">
+        <div class="pillar-icon"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">policy</span></div>
+        <h3>Read/Write Precision</h3>
+        <p>SimpleTrade only requests the permissions needed to execute your blocks—nothing more. We strictly enforce "Least Privilege" access to your broker API.</p>
+      </div>
+    </div>
+
+    <!-- Proof Banner -->
+    <div class="security-proof reveal">
+      <div class="security-proof-text">
+        <h3>Built for Institutions, Designed for You.</h3>
+        <p>Our security architecture is designed by engineers from high-frequency trading firms and elite cyber-security backgrounds. We don't just secure trades; we secure trust.</p>
+        <div class="proof-badges">
+          <div class="proof-badge"><span class="material-symbols-outlined">verified</span> SIPC Insured Partner</div>
+          <div class="proof-badge"><span class="material-symbols-outlined">security</span> SOC2 Type II Compliant</div>
+        </div>
+      </div>
+      <div class="security-proof-shield">
+        <div class="shield-ring"><div class="shield-ring-inner">
+          <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">shield_with_heart</span>
+        </div></div>
+        <p class="shield-label">SimpleTrade Security Shield</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="pricing-header reveal">
+    <div class="pricing-header-left">
+      <span class="section-label">Strategic Access</span>
+      <h2>Institutional Power, Accessible to All.</h2>
+      <p>Designed for Toronto's engineering-grade traders. SimpleTrade bridges the gap between retail limitations and institutional execution.</p>
+    </div>
+  </div>
+  <div class="pricing-grid stagger-parent">
+    <!-- Alpha Tier -->
+    <div class="pricing-card pricing-card--alpha reveal stagger-child">
+      <span class="card-badge">Active Beta</span>
+      <h3>Alpha Tier</h3>
+      <p class="card-subtitle">Free for the first 500 Toronto Traders</p>
+      <div class="price-display">
+        <span class="amount">$0</span>
+        <span class="period">/ First Month</span>
+      </div>
+      <ul class="pricing-features">
+        <li>
+          <span class="material-symbols-outlined">deployed_code</span>
+          <div><strong>Drop &amp; Deploy Engine</strong><span>Full access to institutional-grade execution environment.</span></div>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">history</span>
+          <div><strong>10 Years Backtesting</strong><span>Complete high-fidelity historical data for rigorous strategy validation.</span></div>
+        </li>
+        <li>
+          <span class="material-symbols-outlined">verified_user</span>
+          <div><strong>Founders' Direct Support</strong><span>Priority channel with Adeel Aleem and Sufyaan Desai.</span></div>
+        </li>
+      </ul>
+      <button class="btn-pricing">Reserve Your Spot</button>
+    </div>
+    <!-- Future Pro -->
+    <div class="pricing-card pricing-card--future reveal stagger-child">
+      <span class="future-badge">Coming Soon</span>
+      <h3>Future Pro Tier</h3>
+      <p class="card-subtitle" style="color:var(--on-surface-variant);font-style:normal;">Designed for the automated age. We're building the most advanced algorithmic assistance ever seen in a retail platform.</p>
+      <ul class="future-features">
+        <li>
+          <div class="feat-icon"><span class="material-symbols-outlined">psychology</span></div>
+          <span>AI Strategy Optimization</span>
+        </li>
+        <li>
+          <div class="feat-icon"><span class="material-symbols-outlined">account_tree</span></div>
+          <span>Multi-Broker Support</span>
+        </li>
+      </ul>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <p class="progress-label">In-Development</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANY / FOUNDERS ===== -->
+<section class="founders" id="company">
+  <div class="founders-inner">
+    <div class="founders-text reveal-left">
+      <h2>The Founders.</h2>
+      <p>Born from the engineering halls of Toronto Metropolitan University. We're building the tool we wished we had when we first entered the markets.</p>
+      <div class="tmu-badge">
+        <span class="material-symbols-outlined">school</span>
+        <span>TMU Engineering</span>
+      </div>
+    </div>
+    <div class="founders-cards stagger-parent">
+      <!-- Adeel -->
+      <div class="founder-card reveal stagger-child">
+        <div class="founder-photo">
+          <img src="adeel-photo.jpg" alt="Adeel Aleem">
+        </div>
+        <h3>Adeel Aleem</h3>
+        <p class="founder-role">Co-Founder &amp; Product Tech Lead</p>
+        <p class="founder-desc">Driving the architectural vision and technical strategy to make complex systems feel invisible.</p>
+      </div>
+      <!-- Sufyaan -->
+      <div class="founder-card reveal stagger-child">
+        <div class="founder-photo">
+          <img src="sufyaan-photo.jpg" alt="Sufyaan Desai">
+        </div>
+        <h3>Sufyaan Desai</h3>
+        <p class="founder-role">Co-Founder &amp; Backend &amp; UI Lead</p>
+        <p class="founder-desc">Mastering the balance between high-performance data processing and refined user aesthetics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="cta">
+  <img class="final-cta-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIrLssx96FCdLx70e1GUZYt3tzoFppIw6Otj2Ac7UYNvozmviUrDY9YC4so0DhhUbzuJzt8sK5NQcwsHjiGH_r2yGChDziOB9aou7S_ztaYLS0DW56MHIcIvu_3SWCo8NTBKF2QWWueVAMU8L60QgaapDK8BuaHxUSipTXC6VLZfNgYk4AmQfQkpe_f82aI2YKpW6u91_Vg-mlnt8zZWBzvqbTAzC37rsKKzjWFUWFuvG-91xa4STZqw_YwcHetgBju8KTIQ84qQ" alt="">
+  <div class="final-cta-content reveal">
+    <h2>Join the Next Generation of Toronto Traders.</h2>
+    <p>The waitlist is growing. Secure your early access and be among the first to trade with Quiet Authority.</p>
+    <form class="cta-form" id="ctaForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Request Invite</button>
+    </form>
+    <div class="cta-form-message"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h4>SimpleTrade</h4>
+      <p>© 2024 SimpleTrade. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Regulatory Disclosure</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
